@@ -19,6 +19,10 @@ gulp.task('copyControllers', function () {
     gulp.src('./Controllers/*.cs').pipe(gulp.dest('dist/controllers'));
 });
 
+gulp.task('watch', function () {
+    gulp.watch('./Controllers/*.cs', ['copyControllers']);
+});
+
 //compile css
 //gulp.task('sass', function () {
 //    gulp.src('./Views/*.scss').pipe(sass().on('error', sass.logError)).pipe(gulp.dest('dist/Views'));
